@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { dataSourceOptions } from 'db/typeorm.config';
+import { dataSourceOptions } from '../db/typeorm.config';
 import { ConfigModule } from '@nestjs/config';
 import { PositionModule } from './position/position.module';
 import { TokenModule } from './token/token.module';
