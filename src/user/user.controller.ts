@@ -16,7 +16,7 @@ import { UserService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { AuthGuard } from '@nestjs/passport';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { ImageSizeValidator } from 'src/pipes/imageSizeValidator.pipe';
+import { ImageSizeValidator } from '../pipes/imageSizeValidator.pipe';
 import { ElementsQueryDto } from './dto/elements-query.dto';
 
 @ApiTags('User')

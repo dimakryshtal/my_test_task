@@ -2,9 +2,9 @@ import { ConflictException, Injectable, NotFoundException } from '@nestjs/common
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './entities/user.entity';
-import { StorageService } from 'src/storage/storage.service';
+import { StorageService } from '../storage/storage.service';
 import { CreateUserDto } from './dto/create-user.dto';
-import { PositionService } from 'src/position/position.service';
+import { PositionService } from '../position/position.service';
 import { ElementsQueryDto } from './dto/elements-query.dto';
 import { GetUsersDto } from './dto/get-users.dto';
 import { GetUserDto } from './dto/get-user.dto';
