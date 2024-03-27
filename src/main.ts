@@ -33,7 +33,7 @@ async function bootstrap() {
     .setDescription('Test task for ABZ interview.')
     .setVersion('1.0')
     .addBearerAuth()
-    .addServer('http://localhost:${process.env.PORT || 3000}')
+    .addServer(`http://localhost:${process.env.PORT || 3000}`)
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
