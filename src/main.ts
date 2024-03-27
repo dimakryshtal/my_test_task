@@ -33,7 +33,8 @@ async function bootstrap() {
     .setDescription('Test task for ABZ interview.')
     .setVersion('1.0')
     .addBearerAuth()
-    .addServer(`http://localhost:${process.env.PORT || 3000}`)
+    .addServer(`http://localhost:3000`)
+    .addServer('https://my-test-task-d3f5bcb891f7.herokuapp.com/')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
