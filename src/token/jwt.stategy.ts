@@ -18,8 +18,6 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
     const token = ExtractJwt.fromAuthHeaderAsBearerToken()(req);
     const isInBlacklist = await this.blackListService.isInBlackList(token);
 
-    console.log(isInBlacklist);
-
     if (isInBlacklist) {
       throw new UnauthorizedException('The token has expired');
     }

@@ -53,7 +53,7 @@ export class UserService {
 
     const users = await this.userRepository
       .createQueryBuilder('user')
-      .skip(offset ?? page * count)
+      .skip(offset ?? (page - 1) * count)
       .take(count)
       .getManyAndCount();
 
