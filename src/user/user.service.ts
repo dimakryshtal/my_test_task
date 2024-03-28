@@ -57,7 +57,7 @@ export class UserService {
       .take(count)
       .getManyAndCount();
 
-    const total_pages = Math.floor(users[1] / count);
+    const total_pages = Math.ceil(users[1] / count);
 
     if (page > total_pages)
       throw new NotFoundException({ success: false, message: 'Page not found' });
