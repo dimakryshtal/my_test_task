@@ -11,7 +11,7 @@ export class ElementsQueryDto {
   @IsInt()
   @Min(1)
   @Max(100)
-  @ValidateIf((_, value) => (value ? true : false))
+  @ValidateIf((_, value) => (value || value === 0 ? true : false))
   count?: number;
 
   @IsInt()

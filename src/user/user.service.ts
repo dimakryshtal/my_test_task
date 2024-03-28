@@ -53,8 +53,10 @@ export class UserService {
 
     const users = await this.userRepository
       .createQueryBuilder('user')
+      .leftJoinAndSelect('user.position', 'position')
       .skip(offset ?? (page - 1) * count)
       .take(count)
+      .orderBy('user.id', 'ASC')
       .getManyAndCount();
 
     const total_pages = Math.ceil(users[1] / count);
